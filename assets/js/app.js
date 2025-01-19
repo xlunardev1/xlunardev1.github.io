@@ -3,7 +3,7 @@ let honeypotKey;
 
 // Ambil honeypot key dari server
 async function getHoneypotKey() {
-    const response = await fetch("http://localhost/get-honeypot-key");
+    const response = await fetch("https://nemesisscripts.onrender.com/get-honeypot-key");
     const data = await response.json();
     honeypotKey = data.honeypot_key;
     document.getElementById("honey").value = honeypotKey;
@@ -35,7 +35,7 @@ function checkLicense() {
     var product_name = document.getElementById("product_name").value;
     $.ajax({
         type: "POST",
-        url: "http://localhost/verifylicense",
+        url: "https://nemesisscripts.onrender.com/verifylicense",
         contentType: "application/json", // Tambahkan ini
         dataType: "json", // Tambahkan ini
         data: JSON.stringify({ // Ubah data ke format JSON
@@ -75,7 +75,7 @@ function updateAuth(){
     var new_auth = document.getElementById("new_auth").value;
     $.ajax({
         type: "POST",
-        url: "http://localhost/updateauth",
+        url: "https://nemesisscripts.onrender.com/updateauth",
         contentType: "application/json", // Tambahkan ini
         dataType: "json", // Tambahkan ini
         data: JSON.stringify({ // Ubah data ke format JSON
@@ -107,7 +107,7 @@ function updateData(){
     var server_2 = document.getElementById("server_2").value;
     $.ajax({
         type: "POST",
-        url: "http://localhost/updatelicense",
+        url: "https://nemesisscripts.onrender.com/updatelicense",
         contentType: "application/json", // Tambahkan ini
         dataType: "json", // Tambahkan ini
         data: JSON.stringify({ // Ubah data ke format JSON
